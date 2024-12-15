@@ -1,0 +1,442 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap");
+
+:root {
+  --main-color: #30d5c8;
+  --black-color: #212020;
+  --border: 0.1rem solid rgba(255, 255, 255, 0.4) #13429a;
+}
+* {
+  font-family: "Poppins", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: 0.2s ease;
+}
+
+/*! base html codes*/
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+  scroll-padding-top: 9rem;
+  scroll-behavior: smooth;
+}
+html::-webkit-scrollbar {
+  width: 0.8rem;
+  background-color: white;
+}
+html::-webkit-scrollbar-thumb {
+  border-radius: 3rem;
+  width: 0.8rem;
+  background-color: var(--black-color);
+}
+html::-webkit-scrollbar-track {
+  width: 0.8rem;
+  background-color: transparent;
+}
+body {
+  background-color: var(--main-color);
+}
+section {
+  padding: 2.5rem 2%;
+}
+.btn {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 2rem 3.75rem;
+  border-radius: 20rem;
+  font-size: 1.7rem;
+  color: white;
+  background-color: var(--black-color);
+  cursor: pointer;
+}
+.btn:hover {
+  opacity: 0.8;
+}
+.back-to-home-button {
+  display: inline-block;
+  padding: 1rem 2rem; /* Padding for a uniform look */
+  background-color: white; /* Green background (you can change it) */
+  color: black; /* White text */
+  font-size: 1.5rem; /* Font size */
+  border-radius: 10px; /* Rounded corners */
+  text-align: center;
+  text-decoration: none; /* Removes underline */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
+  cursor: pointer;
+  margin: 20px 0; /* Adds vertical space (top and bottom) */
+}
+
+.back-to-home-button:hover {
+  background-color: #4CAF50; /* Slightly darker green for hover effect */
+  transform: scale(1.05); /* Slightly enlarges the button when hovered */
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .back-to-home-button {
+      font-size: 1.3rem; /* Slightly smaller font size for smaller screens */
+      padding: 0.8rem 1.8rem; /* Slightly smaller padding for smaller screens */
+  }
+}
+.title {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+  margin-bottom: 3.5rem;
+  border-bottom: 0.1rem solid white;
+}
+.title span {
+  color: white;
+  text-transform: uppercase;
+  font-size: 3.5rem;
+}
+/*! header start*/
+.header .logo img {
+  width: 10rem;
+  height: 10rem;
+}
+.header {
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 6%;
+  margin: 0.5rem 1%;
+  border-radius: 20rem;
+  box-shadow: 0px 0px 17px -2px rgba(0, 0, 0, 75);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+.header .navbar a {
+  margin: 0 1rem;
+  font-size: 1.7rem;
+  color: var(--black-color);
+  border-bottom: 0.1rem solid transparent;
+}
+.header .navbar a:hover {
+  border-color: var(--main-color);
+  padding-bottom: 0.3rem;
+}
+.header .buttons button {
+  cursor: pointer;
+  font-size: 2rem;
+  margin-left: 1rem;
+  background-color: transparent;
+}
+.header #bars {
+  display: none;
+}
+/*! header end*/
+
+/*! home start*/
+.home {
+  min-height: 100vh;
+  background: url(../images/home.jpg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin-top: -16.5rem;
+  display: flex;
+  align-items: center;
+}
+.home .content {
+  max-width: 60rem;
+}
+.home .content h3 {
+  font-size: 4.5rem;
+  text-transform: capitalize;
+  color: white;
+}
+.home .content p {
+  font-size: 3rem;
+  font-weight: 300;
+  line-height: 1.5;
+  padding: 1rem 0;
+  color: wheat;
+}
+/*! home end*/
+/*! cars start*/
+.cars .box-cont {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.cars .box-cont .box {
+  padding: 3rem;
+  background-color: white;
+  border-radius: 2rem;
+  background-color: white;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.cars .box-cont .box img {
+  width: 90%;
+  object-fit: cover;
+}
+.cars .box-cont .box .Type {
+  font-size: 2rem;
+  padding: 1rem 0;
+}
+.cars .box-cont .box .Brand {
+  font-size: 2.5rem;
+  padding: 1rem 0;
+}
+/*! cars end*/
+
+/*! about start*/
+.about .row {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 2rem;
+}
+.about .row .image {
+  flex: 1 1 35rem;
+}
+.about .row img {
+  width: 100%;
+}
+.about .row .content {
+  flex: 1 1 35rem;
+}
+.about .row .content h3 {
+  font-size: 5rem;
+  color: white;
+  text-transform: capitalize;
+  margin-bottom: 2.5rem;
+  border-bottom: 0.3rem solid white;
+}
+.about .row .content p {
+  font-size: 3.2rem;
+  color: wheat;
+}
+/*! about end*/
+
+/*! contact start*/
+.contact .row {
+  display: flex;
+  background-color: var(--black-color);
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+.contact .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+  text-align: center;
+}
+.contact .row .top {
+  font-size: 3rem;
+  margin: 2rem 0;
+  text-transform: uppercase;
+  color: white;
+}
+.contact .row .num1 {
+  font-size: 1.5rem;
+  margin: 1rem 0;
+  text-transform: capitalize;
+  color: white;
+}
+.contact .row .num2 {
+  font-size: 1.5rem;
+  text-transform: none;
+  color: white;
+}
+.contact .row form .btn {
+  color: rgb(8, 175, 8);
+  background-color: wheat;
+  font-weight: bold;
+}
+/*! contact end*/
+/*! policy start*/
+.policy .p-all {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+}
+.policy .p-all .p-box {
+  padding: 1rem;
+  background-color: white;
+  border-radius: 2rem;
+  background-color: white;
+  min-height: 60rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.policy .p0 {
+  font-size: 2.5rem;
+  margin: 0 0;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+    .policy .p1 {
+        font-size: 1.8rem;
+        text-transform: none;
+        color: var(--black-color);
+    }
+.policy .p2 {
+  font-size: 2.5rem;
+  margin: 0 0;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+.policy .p3 {
+    font-size: 1.8rem;
+    text-transform: none;
+    color: var(--black-color);
+}
+.policy .p4 {
+    font-size: 2.5rem;
+    margin: 0 0;
+    text-transform: capitalize;
+    color: var(--black-color);
+}
+.policy .p5 {
+    font-size: 1.8rem;
+    text-transform: none;
+    color: var(--black-color);
+}
+    /*! policy end*/
+    /* WP Button Styles */
+    .car-button, .whatsapp-button {
+    margin-top: 1rem;
+    padding: 1.5rem 3rem;
+    border-radius: 2rem;
+    font-size: 1.5rem;
+    color: white;
+    background-color: var(--black-color);
+    display: inline-block;
+    text-align: center;
+    cursor: pointer;
+}
+
+    .car-button:hover, .whatsapp-button:hover {
+        opacity: 0.8;
+    }
+
+.whatsapp-button {
+    background-color: #25D366; /* WhatsApp green */
+    color: white;
+}
+@media (max-width: 768px) {
+    .navbar {
+        display: none;
+        flex-direction: column;
+        background-color: white;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 100%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+        .navbar.active {
+            display: flex;
+        }
+
+        .navbar a {
+            padding: 1rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+        }
+
+    #bars {
+        display: inline-block;
+        font-size: 2.5rem;
+        cursor: pointer;
+        background: none;
+        border: none;
+    }
+}
+.header {
+    border-radius: 12px; /* Smooth corners for the header container */
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for aesthetics */
+}
+
+    .header .navbar {
+        border-radius: 12px; /* Smooth corners for the navbar dropdown */
+        overflow: hidden; /* Ensure the dropdown stays clean */
+        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better appearance */
+    }
+
+    .header #bars {
+        border-radius: 50%; /* Circular toggle button for smoother appearance */
+        padding: 10px; /* Adjust spacing for better usability */
+        transition: background-color 0.3s ease; /* Smooth hover effect */
+    }
+
+        .header #bars:hover {
+            background-color: var(--main-color); /* Change color on hover */
+        }
+
+.navbar a {
+    border-radius: 8px; /* Rounded corners for the navigation links */
+    padding: 5px 10px; /* Add some padding for a cleaner look */
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transitions */
+}
+
+/*!responsive start*/
+@media (max-width: 991px) {
+  html {
+    font-size: 55%;
+  }
+  .header {
+    padding: 1.5rem 2rem;
+  }
+  .header .logo img {
+    height: 7rem;
+  }
+
+  section {
+    padding: 2rem;
+  }
+  .cars .box-cont .box .box-top .brand {
+    font-size: 1rem;
+  }
+  @media (max-width: 768px) {
+    .header #bars {
+      display: inline-block;
+    }
+    .header .topbar {
+      position: absolute;
+      top: 95%;
+      background-color: white;
+      height: calc(100vh - 9rem);
+      width: 30rem;
+      box-shadow: 0px 20px 14px 0px rgba(0 0 0 / 75%);
+      right: -100%;
+    }
+    .header .topbar .active{
+      right: -5rem;
+    }
+    .header .topbar a {
+      color: var(--black-color);
+      display: block;
+      margin: 1.5rem;
+      padding: 0.5rem;
+      font-size: 2rem;
+    }
+  @media (max-width: 576px) {
+    html {
+      font-size: 50%;
+    }
+  }
+}
+}
+/*!responsive end*/
+
+
+
+

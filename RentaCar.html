@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Interactive Webpage</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+<body>
+    <!-- Header Bölümü -->
+    <header class="header">
+        <div class="logo">
+            <img src="images/Logo.jpg" alt="Logo">
+        </div>
+        <nav class="navbar">
+            <a href="#home">Home</a>
+            <a href="Cars.html">Cars</a>
+            <a href="About.html">About</a>
+            <a href="#contact">Contact</a>
+            <a href="#policy">Policy</a>
+        </nav>
+        <button id="bars">&#9776;</button>
+    </header>
+
+    <!-- Ana Sayfa -->
+    <section id="home" class="home">
+        <div class="content">
+            <h3>Pelikan Rent a Car</h3>
+            <p>Explore the best options tailored for you.</p>
+            <a href="About.html" class="btn">Learn More</a>
+        </div>
+    </section>
+
+    <!-- İletişim Bölümü -->
+    <section id="contact" class="contact">
+        <div class="row">
+            <iframe class="map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d797.7571510024802!2d30.72804552150722!3d36.88966397048847!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14c3854ea0e0560d%3A0xde9e81fbef1ea8af!2sPelikan%20otomotiv%20rent%20a%C3%A7ar!5e0!3m2!1str!2str!4v1734258673653!5m2!1str!2str"
+                    style="border:0;"
+                    allowfullscreen=""
+                    loading="lazy">
+            </iframe>
+            <form>
+                <h2 class="top">Contact Us</h2>
+                <p class="num1">Phone: (+90)537 225 61 12</p>
+                <p class="num2">Email: yavuzhalil@gmail.com</p>
+                <a href="https://wa.me/905372256112?text=I%20wanna%20get%20information%20about%20renting."
+                   class="btn">WhatsApp Us</a>
+            </form>
+        </div>
+    </section>
+
+    <!-- Policy Section -->
+    <section id="policy" class="policy">
+        <footer class="policy">
+            <div class="p-all">
+                <div class="p-box">
+                    <p class="p0">Privacy Policy</p>
+                    <p class="p1">We collect personal details (name, contact, payment), usage data (IP, device), and booking information...</p>
+                    <p class="p2">Cookies</p>
+                    <p class="p3">We use cookies for a better experience. You can disable them in your browser settings...</p>
+                    <p class="p4">Lorem Ipsum</p>
+                    <p class="p5">Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+                </div>
+            </div>
+        </footer>
+    </section>
+    <script src="js/script.js"></script>
+</body>
+</html>
